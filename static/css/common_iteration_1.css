@@ -1,0 +1,67 @@
+body{
+	background: url('../img/binding_dark.png');
+}
+.container{
+	background: #fff;
+	padding: 0px 10px 10px;
+	width: 960px !important;
+	
+	-webkit-box-shadow:  0 0 15px #000;
+	-moz-box-shadow:  0 0 15px #000;
+	box-shadow:  0 0 15px #000;
+}
+#student_description{
+	padding-top: 10px;
+	margin-bottom:10px;
+}
+#skill_set_list{
+	font-weight: bold;
+}
+#portfolio_content #portfolio_body{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-top: 0px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+#portfolio_content #portfolio_body .project_list{
+	border-radius: none !important;
+	float: left;
+	margin-bottom: 0px;
+	max-height: 452px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 139px;
+}
+#portfolio_content #portfolio_body .project_list:hover{
+	overflow-y: auto;
+}
+#portfolio_content #portfolio_body .project_link{
+	
+	width: 134px;
+}
+#portfolio_content #portfolio_body .project_link:first-child,
+#portfolio_content #portfolio_body .project_link:last-child{
+	border-radius: 0px !important;
+}
+#portfolio_content #portfolio_body .project_link h5{
+	font-weight: bold;
+	margin: 5px 0px 0px 0px !important;
+}
+#portfolio_content #portfolio_body .preview_pane_container{
+	float: right;
+	padding: 0px;
+	width: 755px;
+}
+#portfolio_content #portfolio_body .preview_pane_container .panel{
+	border-radius: 0px !important;
+	height: 422px;
+	margin-bottom: 0px;
+}
+#portfolio_content #portfolio_body .preview_pane_container .panel-body{
+	padding: 0px;
+}
+#portfolio_content #portfolio_body .info_link_block{
+	margin-bottom: 10px;
+}
+

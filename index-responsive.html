@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/common.css">
+	<script src="static/js/jquery-1.11.0.min.js"></script>
+	<script src="static/js/bootstrap.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#wrapper').on('click','.project_link', function(){
+			var preview_pane = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .preview_pane');
+			var iframe_src = $(this).attr('href');
+			$('.project_link.active').removeClass('active');
+			$(this).addClass('active');
+			preview_pane.html('<iframe src="'+ iframe_src +'" frameborder="0" width="100%" height="420px"></iframe>');
+
+			return false;
+		});
+
+		$('.project_list').each(function(){
+			$(this).find('.project_link:first-child').trigger('click').addClass('active');
+		});
+
+	})
+	</script>
+</head>
+<body>
+	<div id="wrapper" class="container-fluid">
+		<div id="student_description">
+			<div class="media-group">
+				<div class="media">
+					<img src="static/img/default_profile.jpg" alt="" class="img-responsive img-thumbnail media-object pull-left">
+					<div class="media-body">
+						<h4 class="media-heading">Jeremy Griffith</h4>
+						<p>Jeremy is an avid gamer, tech enthusiast, and lover of typography with a huge beard that he has been growing for eight years. He originally attended Western Washington University for Computer Science, but left to start making his own iPhone apps - one of which was potentially an inspiration to Google for their 2012 April Fool’s joke “8-bit Maps”. He is currently employed as a full stack web developer.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="portfolio_content">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#php_mvc" data-toggle="tab">PHP and MVC</a></li>
+				<li><a href="#node_javascript" data-toggle="tab">Node and JavaScript</a></li>
+				<li><a href="#ruby_rails" data-toggle="tab">Ruby on Rails</a></li>
+			</ul>
+
+			<div id="portfolio_body" class="tab-content panel panel-default">
+				<div class="panel-body tab-pane active" id="php_mvc">
+					<div class="project_list list-group col-md-2">
+						<a href="http://spottrender.com" class="project_link list-group-item active">
+							<img src="static/img/jeremy_griffith_1.jpg" class="center-block col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
+						</a>
+						<a href="http://village88.com" class="project_link list-group-item">
+							<img src="static/img/jeremy_griffith_2.jpg" class="center-block col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Village88</h5>
+						</a>
+						<a href="http://codingdojo.com" class="project_link list-group-item">
+							<img src="static/img/jeremy_griffith_3.jpg" class="center-block col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Coding Dojo</h5>
+						</a>
+					</div>
+					<div class="preview_pane_container col-md-10">
+						<p>Lorem Ipsum dolor</p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="panel-body tab-pane" id="node_javascript">
+					<div class="project_list list-group col-md-2">
+						<a href="http://spottrender.com" class="project_link list-group-item active">
+							<img src="static/img/jeremy_griffith_1.jpg" alt="" class="col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
+						</a>
+						<a href="http://village88.com" class="project_link list-group-item">
+							<img src="static/img/jeremy_griffith_2.jpg" alt="" class="col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Village88</h5>
+						</a>
+						<a href="http://codingdojo.com" class="project_link list-group-item">
+							<img src="static/img/jeremy_griffith_3.jpg" alt="" class="col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Coding Dojo</h5>
+						</a>
+					</div>
+					<div class="preview_pane_container col-md-10">
+						<p>Lorem Ipsum dolor</p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="panel-body tab-pane" id="ruby_rails">
+					<div class="project_list list-group col-md-2">
+						<a href="http://spottrender.com" class="project_link list-group-item active">
+							<img src="static/img/jeremy_griffith_1.jpg" alt="" class="col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
+						</a>
+						<a href="http://village88.com" class="project_link list-group-item">
+							<img src="static/img/jeremy_griffith_2.jpg" alt="" class="col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Village88</h5>
+						</a>
+						<a href="http://codingdojo.com" class="project_link list-group-item">
+							<img src="static/img/jeremy_griffith_3.jpg" alt="" class="col-sm-12">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Coding Dojo</h5>
+						</a>
+					</div>
+					<div class="preview_pane_container col-md-10">
+						<p>Lorem Ipsum dolor</p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
