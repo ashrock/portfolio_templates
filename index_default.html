@@ -4,13 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
 	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/common_iteration_3.css">
+	<link rel="stylesheet" href="static/css/common_default.css">
 	<link rel="stylesheet" href="static/css/common.css">
 	<script src="static/js/jquery-1.11.0.min.js"></script>
 	<script src="static/js/bootstrap.js"></script>
 	<script src="static/js/portfolio.js"></script>
 </head>
 <body>
+
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -18,10 +19,10 @@
 			</div>
 
 			<ul class="nav navbar-nav">
-				<li><a href="/portfolio/index_default.html">Default Template</a></li>
+				<li class="active"><a href="/portfolio/index_default.html">Default Template</a></li>
 				<li><a href="/portfolio/index_iteration_1.html">Version 1</a></li>
 				<li><a href="/portfolio/index_iteration_2.html">Version 2</a></li>
-				<li class="active"><a href="/portfolio/index_iteration_3.html">Version 3</a></li>
+				<li><a href="/portfolio/index_iteration_3.html">Version 3</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -32,19 +33,19 @@
 				<div class="media">
 					<img src="static/img/default_profile.jpg" alt="" class="img-responsive img-thumbnail media-object pull-left">
 					<div class="media-body">
-						<h1 class="media-heading">Jeremy Griffith's<small> Portfolio</small></h1>
+						<h1 class="media-heading text-bold">Jeremy Griffith</h1>
 						<p>Jeremy is an avid gamer, tech enthusiast, and lover of typography with a huge beard that he has been growing for eight years. He originally attended Western Washington University for Computer Science, but left to start making his own iPhone apps - one of which was potentially an inspiration to Google for their 2012 April Fool’s joke “8-bit Maps”. He is currently employed as a full stack web developer.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<ul id="skill_set_list" class="nav nav-tabs">
-			<li class="active"><a href="#php_mvc" data-toggle="tab">PHP and MVC</a></li>
-			<li><a href="#node_javascript" data-toggle="tab">Node and JavaScript</a></li>
-				<li><a href="#ruby_rails" data-toggle="tab">Ruby on Rails</a></li>
-		</ul>
 		<div id="portfolio_content">
-			<div id="portfolio_body" class="tab-content">
+			<ul id="portfolio_tab" class="nav nav-tabs">
+				<li class="active"><a href="#php_mvc" data-toggle="tab">PHP and MVC</a></li>
+				<li><a href="#node_javascript" data-toggle="tab">Node and JavaScript</a></li>
+				<li><a href="#ruby_rails" data-toggle="tab">Ruby on Rails</a></li>
+			</ul>
+			<div id="portfolio_body" class="tab-content panel panel-default">
 				<div class="panel-body tab-pane active" id="php_mvc">
 					<div class="project_list list-group">
 						<a href="http://village88.com" class="project_link list-group-item" data-description="An informational website which provides products and services that you need in the Programming Industry. This site refers you to Coding Dojo (Web Development Bootcamp) and Boomyeah (Online Learning Platform). If you are looking for a software engineer, you may also fill in a form to contact them." data-title="Village88" data-technologies="HTML/CSS, PHP, and JQuery">

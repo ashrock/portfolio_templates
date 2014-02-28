@@ -1,49 +1,78 @@
-.container{
-	width: 960px !important;
+@font-face {
+       font-family: museo;
+       src: url('../fonts/museo_sans_500.otf');
 }
-#student_description{
-	padding-top: 10px;
-	margin-bottom:10px;
-}
-#portfolio_content #portfolio_body{
-	border-top-left-radius: 0px;
-	border-top-right-radius: 0px;
-	border-top: 0px;
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-}
-#portfolio_content #portfolio_body .project_list{
-	border-radius: none !important;
-	float: left;
-	margin-bottom: 0px;
-	max-height: 452px;
-	overflow-x: hidden;
-	overflow-y: auto;
-	width: 139px;
 
+* {
+    font-family: museo !important;
 }
-#portfolio_content #portfolio_body .project_link{
-	border: none;
-	max-width: 121px;
+http://help.codingdojo.com/fonts/museo_sans_500.otf
+download the font in that url
+use that font
+michael loves that font
+ 
+
+body{
+    font-size: 14px;
 }
-#portfolio_content #portfolio_body .project_link:first-child,
-#portfolio_content #portfolio_body .project_link:last-child{
-	border-radius: 0px !important;
+.navbar{
+	min-height: 20px;
+    margin-bottom: 0px;
+	padding: 0px 15px;
 }
-#portfolio_content #portfolio_body .project_link h5{
-	font-weight: bold;
-	margin: 5px 0px 0px 0px !important;
+.navbar-brand {
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 14px;
+    padding: 5px 15px;
 }
-#portfolio_content #portfolio_body .preview_pane_container{
-	float: right;
-	padding: 0px;
-	width: 746px;
+.navbar-nav > li > a {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
-#portfolio_content #portfolio_body .preview_pane_container .panel{
-	border-radius: 0px !important;
-	height: 422px;
-	margin-bottom: 0px;
+#student_description p{
+    font-size: 12px;
+    margin-bottom: 0px;
 }
-#portfolio_content #portfolio_body .preview_pane_container .panel-body{
-	padding: 0px;
+#student_description img.img-thumbnail{
+    height: 75px;
+}
+#student_description h1{
+    font-size: 24px;
+}
+#student_description h1,
+#portfolio_content h4{
+    font-size: 14px;
+    font-weight: bold;
+}
+#student_description h1 small{
+    font-size: 12px;
+    font-weight: bold;
+}
+#portfolio_content{
+    margin-bottom: 10px
+}
+#portfolio_content h5{
+    margin-bottom: 10px
+}
+#portfolio_content p{
+    font-size: 12px;
+	margin-bottom: 5px
+}
+#portfolio_tab li a{
+    font-weight: bold;
+    padding: 5px 15px;
+}
+#portfolio_tab .nav-tabs > li{
+    margin-bottom: -2px !important;
+}
+#portfolio_body h4{
+    margin: 0px 0px 5px;
+}
+.text-bold{
+    font-weight: bold;
 }

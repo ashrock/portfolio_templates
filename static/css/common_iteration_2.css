@@ -16,6 +16,10 @@ body{
 	font-weight: bold;
 	margin-top: 10px;
 }
+
+#skill_set_list li a{
+	padding: 8px 15px;
+}
 #portfolio_content
 {
 	background: rgba(256,256,256,0.35);
@@ -53,7 +57,6 @@ body{
 }
 #portfolio_content #portfolio_body .project_link.active{
 	opacity: 1;
-	/*background: #428BCA;*/
 }
 #portfolio_content #portfolio_body .project_link:first-child{
 	padding-top: 0px;
@@ -80,7 +83,7 @@ body{
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel{
 	border-radius: 0px !important;
-	height: 422px;
+	height: 400px;
 	margin-bottom: 0px;
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel-body{
@@ -90,3 +93,6 @@ body{
 	margin-bottom: 10px;
 }
 
+#portfolio_content .panel-body{
+	padding: 0px !important;
+}

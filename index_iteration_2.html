@@ -3,44 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Portfolio</title>
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/common_iteration_2.css">
 	<script src="static/js/jquery-1.11.0.min.js"></script>
 	<script src="static/js/bootstrap.js"></script>
-	<script>
-		$(document).ready(function(){
-			$('#wrapper').on('click','.project_link', function(e){
-				e.preventDefault();
-				$('.project_link.active').removeClass('active');
-				var preview_pane = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .preview_pane');
-				var info_link = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .info_link');
-				preview_pane.html('<iframe src="'+ $(this).attr('href') +'" frameborder="0" width="100%" height="420px"></iframe>');
-				var description_block = $(this).parents('.project_list').siblings('.preview_pane_container').find('p');
-				description_block.html($(this).attr('data-description'));
-				if($(this).attr('data-link') ){
-					info_link.html('<a href="'+ $(this).attr('data-link') +'">'+ $(this).attr('data-link') +'</a>');
-				}
-				$(this).addClass('active');
-			});
-
-			$('.project_list').each(function(){
-				var list_item = $(this).find('.project_link:first-child');
-				var preview_pane = $(this).siblings('.preview_pane_container').find(' .preview_pane');
-				var info_link = $(this).siblings('.preview_pane_container').find(' .info_link');
-				var description_block = $(this).siblings('.preview_pane_container').find('p');
-				preview_pane.html('<iframe src="'+ list_item.attr('href') +'" frameborder="0" width="100%" height="420px"></iframe>');
-				description_block.html(list_item.attr('data-description'));
-
-				if(list_item.attr('data-link') != null){
-					info_link.html('<a href="'+ list_item.attr('data-link') +'">'+ list_item.attr('data-link') +'</a>');
-				}
-				$(this).addClass('active');
-			});
-
-		});
-	</script>
+	<script src="static/js/portfolio.js"></script>
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/common_iteration_2.css">
+	<link rel="stylesheet" href="static/css/common.css">
 </head>
 <body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/portfolio">Portfolio</a>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="/portfolio/index_default.html">Default Template</a></li>
+				<li><a href="/portfolio/index_iteration_1.html">Version 1</a></li>
+				<li class="active"><a href="/portfolio/index_iteration_2.html">Version 2</a></li>
+				<li><a href="/portfolio/index_iteration_3.html">Version 3</a></li>
+			</ul>
+		</div>
+	</nav>
+	
 	<div id="wrapper" class="container">
 		<div id="student_description">
 			<div class="media-group">
@@ -60,109 +45,83 @@
 		</div>
 		<div id="portfolio_content">
 			<div id="portfolio_body" class="tab-content">
-				<div class="tab-pane active" id="php_mvc">
+				<div class="panel-body tab-pane active" id="php_mvc">
 					<div class="project_list list-group">
-						<a href="http://spottrender.com" class="project_link list-group-item active" data-description="This is for SpotTrender" data-link="https://github.com/ashrock/ducking-avenger">
-							<img src="static/img/jeremy_griffith_1.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
-						</a>
-						<a href="http://village88.com" class="project_link list-group-item" data-description="This is for Village88" data-link="https://github.com/ashrock/v88">
-							<img src="static/img/jeremy_griffith_2.jpg" class="center-block img-thumbnail">
+						<a href="http://village88.com" class="project_link list-group-item" data-description="An informational website which provides products and services that you need in the Programming Industry. This site refers you to Coding Dojo (Web Development Bootcamp) and Boomyeah (Online Learning Platform). If you are looking for a software engineer, you may also fill in a form to contact them." data-title="Village88" data-technologies="HTML/CSS, PHP, and JQuery">
+							<img src="static/img/village88.png" class="center-block img-thumbnail">
 							<div class="clearfix"></div>
 							<h5 class="list-group-item-heading text-center">Village88</h5>
 						</a>
-						<a href="http://codingdojo.com" class="project_link list-group-item" data-description="This is for Coding Dojo" data-link="https://github.com/ashrock/coding_dojo">
-							<img src="static/img/jeremy_griffith_3.jpg" class="center-block img-thumbnail">
+						<a href="http://codingdojo.com" class="project_link list-group-item" data-description="Is a website that provides information about Coding Dojo’s 12-week web development bootcamp. People can apply to learn how to code through the website. Everyone, with or without any coding experience, is invited to join in. Bootcamps are held in two branches in United States: California and Seattle." data-title="Coding Dojo" data-technologies="HTML/CSS, Codeigniter, PHP, JQuery, and Stripe and Paypal for payments.">
+							<img src="static/img/codingdojo.png" class="center-block img-thumbnail">
 							<div class="clearfix"></div>
 							<h5 class="list-group-item-heading text-center">Coding Dojo</h5>
 						</a>
-						<a href="http://spottrender.com" class="project_link list-group-item" data-description="This is for SpotTrender">
-							<img src="static/img/jeremy_griffith_1.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
-						</a>
-						<a href="http://spottrender.com" class="project_link list-group-item" data-description="This is for SpotTrender">
-							<img src="static/img/jeremy_griffith_1.jpg" class="center-block img-thumbnail">
+						<a href="http://spottrender.com" class="project_link list-group-item" data-description="Improve sales and brand loyalty by A/B testing your video spots with Spot Trender website. This is mainly designed for advertisers to test how much attention they can get from their viewers." data-title="SpotTrender" data-technologies="HTML/CSS, Codeigniter, PHP, JQuery, Highcharts API, and Stripe for payments.">
+							<img src="static/img/spottrender.png" class="center-block img-thumbnail">
 							<div class="clearfix"></div>
 							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
 						</a>
 					</div>
 					<div class="preview_pane_container">
-						<div class="main_preview_pane" class="panel panel-default">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
 							<div class="panel-body">
 								<div class="preview_pane"></div>
 							</div>
 						</div>
-						<p></p>
-						<div class="info_link_block">
-							<span class="label label-info">git</span>
-							<span class="info_link"></span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="panel-body tab-pane" id="node_javascript">
+					<div class="project_list list-group">
+						<a href="https://help.codingdojo.com" class="project_link list-group-item" data-description="This is an application designed especially for Coding Dojo students where they can get real-time, remote assistance. This application is powered with video call, chat and screen share feature." data-title="Help Application" data-technologies="HTML/CSS, NodeJS, Express.io, Javascripts, and JQuery.">
+							<img src="static/img/help.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Help App</h5>
+						</a>
+						<a href="http://node.codingdojo.com" class="project_link list-group-item" data-description="This is a simple application powered by Node.js to teach Coding Dojo bootcamp students how broadcasting works. This helps them understand the flow of functions and how do they work real time." data-title="Node Demonstration App" data-technologies="HTML/CSS, NodeJS, Express.io, Javascripts, and Jquery.">
+							<img src="static/img/node.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Node Demonstration App</h5>
+						</a>
+						<a href="http://algorithm.codingdojo.com" class="project_link list-group-item" data-description="This is an application used by Coding Dojo bootcamp students to practice solving programs. This is specially designed to help students enhance their coding and analytical skills." data-title="Algorithm Application" data-technologies="HTML/CSS, Javascripts, and Jquery.">
+							<img src="static/img/algorithm.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Algorithm Application</h5>
+						</a>
+					</div>
+					
+					<div class="preview_pane_container">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
 						</div>
 					</div>
 					<div class="clearfix"></div>
 				</div>
-				<div class="tab-pane" id="node_javascript">
-					<div class="project_list list-group col-md-2">
-						<a href="http://spottrender.com" class="project_link list-group-item active">
-							<img src="static/img/jeremy_griffith_1.jpg" alt="" class="center-block img-thumbnail">
+
+				<div class="panel-body tab-pane" id="ruby_rails">
+					<div class="project_list list-group">
+						<a href="http://codingdojo.herokuapp.com" class="project_link list-group-item" data-description="This is a site where Coding Dojo bootcamp students interact and advertise their skills to the recruiters. The students can post their resumes and portfolios on this site." data-title="Recruiters' Library App" data-technologies="HTML/CSS, Ruby on Rails, Javascripts, and Jquery.">
+							<img src="static/img/recruiters.png" class="center-block img-thumbnail">
 							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
-						</a>
-						<a href="http://village88.com" class="project_link list-group-item">
-							<img src="static/img/jeremy_griffith_2.jpg" alt="" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Village88</h5>
-						</a>
-						<a href="http://codingdojo.com" class="project_link list-group-item">
-							<img src="static/img/jeremy_griffith_3.jpg" alt="" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Coding Dojo</h5>
+							<h5 class="list-group-item-heading text-center">Recruiters' Library App</h5>
 						</a>
 					</div>
 					<div class="preview_pane_container">
-						<div class="main_preview_pane" class="panel panel-default">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
 							<div class="panel-body">
 								<div class="preview_pane"></div>
-							</div>
-						</div>
-						<p></p>
-						<div class="info_link_block">
-							<span class="label label-info">git</span>
-							<span class="info_link"></span>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="tab-pane" id="ruby_rails">
-					<div class="project_list list-group col-md-2">
-						<a href="http://spottrender.com" class="project_link list-group-item active">
-							<img src="static/img/jeremy_griffith_1.jpg" alt="" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">SpotTrender</h5>
-						</a>
-						<a href="http://village88.com" class="project_link list-group-item">
-							<img src="static/img/jeremy_griffith_2.jpg" alt="" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Village88</h5>
-						</a>
-						<a href="http://codingdojo.com" class="project_link list-group-item">
-							<img src="static/img/jeremy_griffith_3.jpg" alt="" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Coding Dojo</h5>
-						</a>
-					</div>
-					<div class="preview_pane_container col-md-10">
-						<div class="preview_pane_container">
-							<div class="main_preview_pane" class="panel panel-default">
-								<div class="panel-body">
-									<div class="preview_pane"></div>
-								</div>
-							</div>
-							<p></p>
-							<div class="info_link_block">
-								<span class="label label-info">git</span>
-								<span class="info_link"></span>
 							</div>
 						</div>
 					</div>

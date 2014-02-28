@@ -18,7 +18,7 @@ body{
 #skill_set_list li a{
 	color: #fff;
 	margin: 0px;
-	padding: 10px 10px;
+	padding: 8px 10px;
 }
 #skill_set_list li.active a, #skill_set_list li:hover a{
 	background: rgba(0,0,0, 0.75);
@@ -80,6 +80,7 @@ body{
 #portfolio_content #portfolio_body .preview_pane_container{
 	color: #fff;
 	float: right;
+	margin-bottom: 10px;
 	padding: 10px 0px 0px;
 	width: 790px;
 }
@@ -88,7 +89,7 @@ body{
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel{
 	border-radius: 0px !important;
-	height: 422px;
+	height: 400px;
 	margin-bottom: 0px;
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel-body{
@@ -97,4 +98,6 @@ body{
 #portfolio_content #portfolio_body .info_link_block{
 	margin-bottom: 10px;
 }
-
+#portfolio_content .panel-body{
+	padding: 0px !important;
+}
