@@ -1,18 +1,64 @@
+body{
+    font-size: 14px;
+}
 .navbar{
-	min-height: 30px;
+	min-height: 20px;
+    margin-bottom: 0px;
 	padding: 0px 15px;
 }
 .navbar-brand {
-    float: left;
-    font-size: 18px;
-    height: 30px;
-    line-height: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 14px;
     padding: 5px 15px;
 }
 .navbar-nav > li > a {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 14px;
     padding-bottom: 5px;
     padding-top: 5px;
 }
+#student_description p{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+#student_description img.img-thumbnail{
+    height: 75px;
+}
+#student_description h1{
+    font-size: 24px;
+}
+#student_description h1,
+#portfolio_content h4{
+    font-size: 14px;
+    font-weight: bold;
+}
+#student_description h1 small{
+    font-size: 12px;
+    font-weight: bold;
+}
 #portfolio_content{
-	margin-bottom: 20px
+    margin-bottom: 10px
+}
+#portfolio_content h5{
+    margin-bottom: 10px
+}
+#portfolio_content p{
+    font-size: 12px;
+	margin-bottom: 5px
+}
+#portfolio_tab li a{
+    font-weight: bold;
+    padding: 5px 15px;
+}
+#portfolio_tab .nav-tabs > li{
+    margin-bottom: -2px !important;
+}
+#portfolio_body h4{
+    margin: 0px 0px 5px;
+}
+.text-bold{
+    font-weight: bold;
 }

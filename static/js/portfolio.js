@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$(this).parents('.project_list').find('.project_link.active').removeClass('active');
 		var preview_pane = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .preview_pane');
 		var info_link = $(this).parents('.project_list').siblings('.preview_pane_container').find(' .info_link');
-		preview_pane.html('<iframe src="'+ $(this).attr('href') +'" frameborder="0" width="100%" height="420px"></iframe>');
+		preview_pane.html('<iframe src="'+ $(this).attr('href') +'" frameborder="0" width="100%" height="400px"></iframe>');
 		var title_block = $(this).parents('.project_list').siblings('.preview_pane_container').find('h4');
 		var description_block = $(this).parents('.project_list').siblings('.preview_pane_container').find('.project_description');
 		var technologies_block = $(this).parents('.project_list').siblings('.preview_pane_container').find('.technologies_used');
@@ -24,7 +24,7 @@ $(document).ready(function(){
 		var title_block = preview_pane_container.find('h4');
 		var description_block = preview_pane_container.find('.project_description');
 		var technologies_block = preview_pane_container.find('.technologies_used');
-		preview_pane.html('<iframe src="'+ list_item.attr('href') +'" frameborder="0" width="100%" height="420px"></iframe>');
+		preview_pane.html('<iframe src="'+ list_item.attr('href') +'" frameborder="0" width="100%" height="400px"></iframe>');
 
 		description_block.html(list_item.attr('data-description'));
 		

@@ -17,6 +17,9 @@ body{
 #skill_set_list{
 	font-weight: bold;
 }
+#skill_set_list li a{
+	padding: 8px 15px;
+}
 #portfolio_content #portfolio_body{
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
@@ -55,7 +58,7 @@ body{
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel{
 	border-radius: 0px !important;
-	height: 422px;
+	height: 400px;
 	margin-bottom: 0px;
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel-body{

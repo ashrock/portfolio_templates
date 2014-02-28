@@ -20,7 +20,6 @@
 	overflow-x: hidden;
 	overflow-y: auto;
 	width: 139px;
-
 }
 #portfolio_content #portfolio_body .project_link{
 	border: none;
@@ -41,7 +40,7 @@
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel{
 	border-radius: 0px !important;
-	height: 422px;
+	height: 400px;
 	margin-bottom: 0px;
 }
 #portfolio_content #portfolio_body .preview_pane_container .panel-body{
