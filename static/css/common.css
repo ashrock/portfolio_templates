@@ -70,3 +70,9 @@ body{
 .text-bold{
     font-weight: bold;
 }
+.git-icon{
+    background: url('../img/github.png');
+    display: inline-block;
+    height: 11px;
+    width: 12px;
+}
