@@ -90,3 +90,6 @@ body{
 	margin-bottom: 10px;
 }
 
+#portfolio_content .panel-body{
+	padding: 0px !important;
+}
